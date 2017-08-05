@@ -1,0 +1,8 @@
+{
+  "hosting": {
+    "rewrites": [{
+      "source": "/get",
+      "function": "api"
+    }]
+  }
+}
