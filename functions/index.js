@@ -7,7 +7,7 @@ const axios = require('axios')
 const parseXml = require('./xml').parse
 
 const app = express()
-app.use(cors({ origin: true }))
+app.use(cors())
 
 function expectations(data, expect) {
   if (!!expect) {
@@ -25,7 +25,7 @@ function expectations(data, expect) {
   return data
 }
 
-app.get('/get', (req, res) => {
+app.get('/get', cors(), (req, res) => {
   const {
     url, expect
   } = req.query
